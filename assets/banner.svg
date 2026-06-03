@@ -1,0 +1,54 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#1c2430" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <linearGradient id="teal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="#06080c"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+  <rect x="0.5" y="0.5" width="1279" height="639" fill="none" stroke="#1c2430" stroke-width="1"/>
+
+  <!-- shield mark -->
+  <g transform="translate(96,196) scale(6.4)" filter="url(#soft)">
+    <path d="M12 2.5 4 5.5v6c0 4.5 3.2 8.6 8 10 4.8-1.4 8-5.5 8-10v-6L12 2.5Z"
+          fill="#0b0f16" stroke="url(#teal)" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="m8.5 12 2.5 2.5L16 9" fill="none" stroke="#5eead4" stroke-width="1.7"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- wordmark + tagline -->
+  <text x="296" y="296" font-size="128" font-weight="700" letter-spacing="-3" fill="#e8edf4">Kalkan</text>
+  <text x="300" y="360" font-size="34" font-weight="500" fill="#8a97a8">Ücretsiz Web Güvenlik Tarayıcısı</text>
+
+  <!-- badge chip -->
+  <rect x="300" y="398" width="486" height="48" rx="10" fill="#0b0f16" stroke="#2dd4bf" stroke-opacity="0.45"/>
+  <text x="324" y="429" font-family="Menlo, monospace" font-size="19" letter-spacing="2" fill="#2dd4bf">AÇIK KAYNAK · TÜRKÇE · 13 MODÜL</text>
+
+  <!-- score gauge -->
+  <g transform="translate(1066,250)">
+    <circle r="94" fill="none" stroke="#1c2430" stroke-width="13"/>
+    <circle r="94" fill="none" stroke="url(#teal)" stroke-width="13" stroke-linecap="round"
+            stroke-dasharray="560 590" transform="rotate(-90)" filter="url(#soft)"/>
+    <text x="0" y="8" text-anchor="middle" font-size="74" font-weight="700" fill="#5eead4">A+</text>
+    <text x="0" y="44" text-anchor="middle" font-family="Menlo, monospace" font-size="18" fill="#8a97a8">95 / 100</text>
+  </g>
+
+  <!-- footer strip -->
+  <line x1="96" y1="556" x2="1184" y2="556" stroke="#1c2430" stroke-width="1"/>
+  <text x="96" y="598" font-family="Menlo, monospace" font-size="20" fill="#56616f">$ npx <tspan fill="#8a97a8">kalkan</tspan> ornek.com  <tspan fill="#2dd4bf">→  A+</tspan></text>
+  <text x="1184" y="598" text-anchor="end" font-family="Menlo, monospace" font-size="18" fill="#56616f">github.com/batiinn/kalkan</text>
+</svg>

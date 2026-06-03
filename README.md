@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner.png" alt="Kalkan — Ücretsiz Web Güvenlik Tarayıcısı" width="100%">
+
 # 🛡 Kalkan
 
 **Açık kaynak, Türkçe web güvenlik tarayıcısı**
