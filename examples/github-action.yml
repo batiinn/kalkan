@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Kalkan ile tara
-        uses: kalkan-security/kalkan@v1
+        uses: batiinn/kalkan@main
         with:
           url: ornek.com
           fail-under: "70"

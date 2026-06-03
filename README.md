@@ -78,7 +78,7 @@ jobs:
   kalkan:
     runs-on: ubuntu-latest
     steps:
-      - uses: kalkan-security/kalkan@v1
+      - uses: batiinn/kalkan@main
         with:
           url: ornek.com
           fail-under: "70"   # puan < 70 ise başarısız
@@ -95,7 +95,7 @@ echo $?   # eşik aşıldıysa 1, geçtiyse 0
 ## 🏅 Rozet & PDF Rapor
 
 - **PDF rapor:** Tarama sonrası **PDF olarak indir** ile tüm bulguları içeren, müşteriye teslim edilebilir profesyonel bir rapor üretin.
-- **Paylaşılabilir link:** Her tarama `?/url=...` permalink'iyle paylaşılabilir; link açıldığında otomatik yeniden taranır.
+- **Paylaşılabilir link:** Her tarama `?url=...` permalink'iyle paylaşılabilir; link açıldığında otomatik yeniden taranır.
 - **Rozet:** Sitenizin altına ekleyebileceğiniz canlı güvenlik rozeti:
 
 ```markdown

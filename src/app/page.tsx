@@ -27,7 +27,7 @@ export default function Home() {
           </span>
         </div>
         <a
-          href="https://github.com"
+          href="https://github.com/batiinn/kalkan"
           target="_blank"
           rel="noreferrer"
           className="flex items-center gap-2 rounded-lg border border-[color:var(--color-border)] px-3.5 py-2 text-sm text-[color:var(--color-ink-dim)] transition-colors hover:border-[color:var(--color-border-bright)] hover:text-[color:var(--color-ink)]"

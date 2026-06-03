@@ -24,7 +24,7 @@ export async function safeFetch(
       redirect: opts.redirect ?? "follow",
       signal: controller.signal,
       headers: {
-        "User-Agent": "Kalkan-Security-Scanner/0.1 (+https://github.com/kalkan)",
+        "User-Agent": "Kalkan-Security-Scanner/0.1 (+https://github.com/batiinn/kalkan)",
         Accept: "*/*",
       },
     });
