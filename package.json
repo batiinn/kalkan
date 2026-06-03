@@ -1,0 +1,43 @@
+{
+  "name": "kalkan",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "description": "Açık kaynak Türkçe web güvenlik tarayıcısı — SSL, güvenlik header'ları, DNS/e-posta güvenliği, çerez güvenliği, açıkta kalan dosyalar ve subdomain keşfi tek raporda.",
+  "keywords": [
+    "security",
+    "scanner",
+    "guvenlik",
+    "ssl",
+    "security-headers",
+    "dmarc",
+    "turkce",
+    "kvkk"
+  ],
+  "bin": {
+    "kalkan": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cli": "tsx src/scanner/cli.ts",
+    "build:cli": "tsc -p tsconfig.cli.json"
+  },
+  "dependencies": {
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "22.10.7",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "postcss": "8.5.1",
+    "tailwindcss": "^4.3.0",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
+  }
+}

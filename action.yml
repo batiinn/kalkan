@@ -1,0 +1,41 @@
+name: "Kalkan Güvenlik Taraması"
+description: "Bir alan adını Kalkan ile tarar; puan eşiğinin altındaysa build'i düşürür."
+author: "Kalkan"
+branding:
+  icon: "shield"
+  color: "green"
+
+inputs:
+  url:
+    description: "Taranacak alan adı veya URL (ör. ornek.com)"
+    required: true
+  fail-under:
+    description: "Genel güvenlik puanı bu değerin (0-100) altındaysa iş başarısız olur"
+    required: false
+    default: "0"
+  fail-on:
+    description: "Bu ciddiyette (critical|high|medium) bulgu varsa iş başarısız olur"
+    required: false
+    default: ""
+  version:
+    description: "Kullanılacak Kalkan npm sürümü"
+    required: false
+    default: "latest"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Node.js kurulumu
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+
+    - name: Kalkan güvenlik taraması
+      shell: bash
+      run: |
+        ARGS="${{ inputs.url }} --fail-under ${{ inputs.fail-under }}"
+        if [ -n "${{ inputs.fail-on }}" ]; then
+          ARGS="$ARGS --fail-on ${{ inputs.fail-on }}"
+        fi
+        echo "🛡 Kalkan taraması: ${{ inputs.url }}"
+        npx --yes kalkan@${{ inputs.version }} $ARGS

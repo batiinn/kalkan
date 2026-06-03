@@ -1,0 +1,19 @@
+name: Güvenlik Taraması
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  kalkan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kalkan ile tara
+        uses: kalkan-security/kalkan@v1
+        with:
+          url: ornek.com
+          fail-under: "70"
+          fail-on: high
